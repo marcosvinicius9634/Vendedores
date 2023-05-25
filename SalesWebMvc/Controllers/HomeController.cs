@@ -17,7 +17,12 @@ namespace SalesWebMvc.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
 
+            ViewData["Message"] = "Olá Mundo Estou no WEBSERVICES !";
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
