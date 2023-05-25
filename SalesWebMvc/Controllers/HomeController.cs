@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SalesWebMvc.Models;
 using System.Diagnostics;
-
+using SalesWebMvc.Models.ViewModels;
 namespace SalesWebMvc.Controllers
 {
     public class HomeController : Controller
@@ -12,11 +12,12 @@ namespace SalesWebMvc.Controllers
         {
             _logger = logger;
         }
-
+       
         public IActionResult Index()
         {
             return View();
         }
+       
         public IActionResult About()
         {
 
