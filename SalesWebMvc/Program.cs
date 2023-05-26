@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.Identity.Client;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
-
+using SalesWebMvc.Services;
 namespace SalesWebMvc
 {
     public class Program
@@ -18,6 +18,7 @@ namespace SalesWebMvc
               options.UseMySql("server=localhost;userid=admin;password=123456;database=saleswebmvcappdb", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.33-mysql")));
 
             builder.Services.AddScoped<SeedingService>();
+            builder.Services.AddScoped<SellerService>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
